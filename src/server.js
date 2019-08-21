@@ -1,12 +1,10 @@
 import axios from 'axios'
 import Token10 from './models/Token10'
 import Token20 from './models/Token20'
-import web3 from './web3'
 import cron from 'node-cron'
-import BN from 'bignumber.js'
 import config from './config'
 
-const limit = config.limit
+const limit = parseInt(config.limit)
 const cron_string = config.cron_string
 
 const getTRC20 = async () => {
